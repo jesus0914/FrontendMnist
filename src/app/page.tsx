@@ -24,7 +24,7 @@ export default function Home() {
     const dataURL = canvas.toDataURL('image/png');
 
     try {
-      const res = await fetch('https://friendly-octo-fishstick-production.up.railway.app/', {
+      const res = await fetch('https://friendly-octo-fishstick-production.up.railway.app/predict', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ imagen: dataURL }),
